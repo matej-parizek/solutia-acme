@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title th:text="${error} ?: 'Error'">Error</title>
+        <style>
+            body { font-family: Arial, sans-serif; background: #f8f9fa; color: #333; }
+            .error-container {
+            max-width: 600px; margin: 80px auto; background: #fff;
+            padding: 30px; border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,.1);
+            text-align: center;
+            }
+            h1 { color: #dc3545; }
+            p  { margin: 10px 0; }
+            a  { color: #007bff; text-decoration: none; }
+            a:hover { text-decoration: underline; }
+        </style>
+    </head>
+    <body>
+        <div class="error-container">
+            <h1 th:text="${error} ?: 'Unexpected error'">Unexpected error</h1>
+            <p th:text="${message} ?: 'Something went wrong.'">
+                Something went wrong.
+            </p>
+            <p th:if="${status}">Status: <span th:text="${status}"></span></p>
+            <p th:if="${timestamp}">Timestamp: <span th:text="${timestamp}"></span></p>
+
+            <p><a th:href="@{/}">Back to home</a></p>
+        </div>
+    </body>
+</html>
