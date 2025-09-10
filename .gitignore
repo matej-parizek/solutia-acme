@@ -1,0 +1,60 @@
+# Database files
+/data/*
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+
+# Spring Boot specific
+*.war
+*.jar
+
+# Maven specific
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle specific
+.gradle/
+build/
+!gradle-wrapper.jar
+**/out/
+
+# IDE specific
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.map
+*.lock
+
+# Test reports
+test-output/
+surefire-reports/
+jacoco.exec
+
+# Sensitive files
+application.properties
+application.yml
+.env
+secrets/
+
+# Temporary runtime files
+hs_err_pid*
